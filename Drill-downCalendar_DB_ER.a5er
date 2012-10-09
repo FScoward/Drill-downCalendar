@@ -1,0 +1,281 @@
+﻿# A5:ER FORMAT:06
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright (C)2007 m.matsubara
+# A5:SQL Mk-2 Copyright (C)1997 m.matsubara
+#  http://www.wind.sannet.ne.jp/m_matsu/developer/a5m2/
+
+[Manager]
+ProjectName=Drill-downCalendar
+Author=FScoward
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=0
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A3Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+ShowTag=1
+
+[Relation]
+Entity1=Plans_MiddlePlans
+Entity2=中日程
+RelationType1=2
+RelationType2=3
+Fields1=middle_planID
+Fields2=middle_planID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5000,5000,4928,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20121008144635
+LineMode=0
+Bar1=500
+Bar2=500
+Bar3=493
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=NEW_ENTITY1
+Entity2=大日程
+RelationType1=2
+RelationType2=3
+Fields1=projectID,planID
+Fields2=projectID,planID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5000,5000,5000,R,R
+Dependence=1
+Caption=
+PName=
+ModifiedDateTime=20121008144628
+LineMode=0
+Bar1=500
+Bar2=500
+Bar3=500
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=Mddle_Small
+Entity2=SmallPlans
+RelationType1=2
+RelationType2=3
+Fields1=small_planID
+Fields2=small_planID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5000,5000,4369,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20121008144643
+LineMode=0
+Bar1=500
+Bar2=500
+Bar3=437
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=中日程
+Entity2=Mddle_Small
+RelationType1=2
+RelationType2=3
+Fields1=middle_planID
+Fields2=middle_planID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5000,5000,5217,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20121008144332
+LineMode=0
+Bar1=500
+Bar2=500
+Bar3=522
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=Mddle_Small
+LName=Mddle_Small
+Comment=
+TableOption=
+Page=MAIN
+Left=1250
+Top=950
+Field="middle_planID","middle_planID","@INT","NOT NULL",,"","",$FFFFFFFF
+Field="small_planID","small_planID","@INT",,,"","",$FFFFFFFF
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20121008144311
+Position="MAIN",1250,950
+
+[Relation]
+Entity1=大日程
+Entity2=Plans_MiddlePlans
+RelationType1=2
+RelationType2=3
+Fields1=プランID
+Fields2=planID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5000,5000,5413,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20121008144114
+LineMode=0
+Bar1=500
+Bar2=500
+Bar3=541
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=Plans_MiddlePlans
+LName=Plans_MiddlePlans
+Comment=
+TableOption=
+Page=MAIN
+Left=600
+Top=950
+Field="planID","planID","@INT","NOT NULL",,"","",$FFFFFFFF
+Field="middle_planID","middle_planID","@INT","NOT NULL",,"","",$FFFFFFFF
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20121008143940
+Position="MAIN",600,950
+
+[Entity]
+PName=SmallPlans
+LName=SmallPlans
+Comment=
+TableOption=
+Page=MAIN
+Left=1750
+Top=850
+Field="small_planID","small_planID","@TEXT","NOT NULL",,"","",$FFFFFFFF
+Field="small_plan_name","small_plan_name","@TEXT","NOT NULL",,"","",$FFFFFFFF
+Field="priority","priority","@INT","NOT NULL",,"","",$FFFFFFFF
+Field="open","open","@Boolean","NOT NULL",,"","",$FFFFFFFF
+Field="close","close","@Boolean","NOT NULL",,"","",$FFFFFFFF
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20121008013611
+Position="MAIN",1750,850,189,287
+
+[Entity]
+PName=中日程
+LName=MiddlePlans
+Comment=
+TableOption=
+Page=MAIN
+Left=900
+Top=900
+Field="middle_planID","middle_planID","@INT","NOT NULL",,"","",$FFFFFFFF
+Field="middle_plan_name","middle_plan_name","@TEXT","NOT NULL",,"","",$FFFFFFFF
+Field="start","start","@DATE","NOT NULL",,"","",$FFFFFFFF
+Field="end","end","@DATE","NOT NULL",,"","",$FFFFFFFF
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20121008143643
+Position="MAIN",900,900,198,153
+
+[Relation]
+Entity1=案件
+Entity2=NEW_ENTITY1
+RelationType1=2
+RelationType2=3
+Fields1=projectID
+Fields2=projectID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5000,5000,5413,R,R
+Dependence=1
+Caption=
+PName=
+ModifiedDateTime=20121008144622
+LineMode=0
+Bar1=500
+Bar2=500
+Bar3=541
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=NEW_ENTITY1
+LName=Project_Plans
+Comment=関連付け
+TableOption=
+Page=MAIN
+Left=700
+Top=400
+Field="projectID","projectID","@INT","NOT NULL",0,"","",$FFFFFFFF
+Field="planID","planID","@INT","NOT NULL",1,"","",$FFFFFFFF
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20121007235820
+Position="MAIN",700,400
+
+[Entity]
+PName=大日程
+LName=Plans
+Comment=
+TableOption=
+Page=MAIN
+Left=150
+Top=850
+Field="projectID","projectID","@INT","NOT NULL",0,"","",$FFFFFFFF
+Field="planID","planID","@INT","NOT NULL",1,"","",$FFFFFFFF
+Field="planID","プランID","@INT","NOT NULL",,"","",$FFFFFFFF
+Field="plan_name","予定","@TEXT","NOT NULL",,"","",$FFFFFFFF
+Field="start","開始日","@DATE","NOT NULL",,"","",$FFFFFFFF
+Field="end","終了日","@DATE","NOT NULL",,"","",$FFFFFFFF
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20121007235748
+Position="MAIN",150,850,312,255
+
+[Entity]
+PName=案件
+LName=Project
+Comment=
+TableOption=
+Page=MAIN
+Left=200
+Top=350
+Field="projectID","projectID","@INT","NOT NULL",0,"","",$FFFFFFFF
+Field="project_name","案件名","@TEXT","NOT NULL",,"","",$FFFFFFFF
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20121007235638
+Position="MAIN",200,350,191,155

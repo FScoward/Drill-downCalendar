@@ -1,0 +1,12 @@
+.row-fluid .span2 {
+	border-radius: 10px;
+	border: 2px;
+	border-style: outset;
+	padding: 10px;
+}
+.row-fluid .span10 {
+	border-radius: 10px;
+	border: 2px;
+	border-style: inset;
+	padding: 10px;
+}

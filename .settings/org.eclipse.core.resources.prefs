@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//app/controllers/Application.scala=UTF-8
+encoding//app/controllers/ProjectCalendar.scala=UTF-8
+encoding//app/models/DetailsOfThePlans.scala=UTF-8
+encoding//app/models/LargeCalendar.scala=UTF-8
+encoding//app/models/MediumCalendar.scala=UTF-8
+encoding//app/models/MyCalendar.scala=UTF-8
+encoding//app/models/ScheduleOfTheDay.scala=UTF-8
+encoding//app/models/ScheduleOfTheWeek.scala=UTF-8
+encoding//app/models/SmallCalendar.scala=UTF-8
+encoding//app/models/plans/MediumPlans.scala=UTF-8
+encoding//app/models/plans/Plans.scala=UTF-8
+encoding//app/models/plans/SmallPlans.scala=UTF-8
+encoding/<project>=UTF-8
